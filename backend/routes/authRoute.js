@@ -1,4 +1,4 @@
-import express, { Router } from 'express'
+import express from 'express'
 import { body } from 'express-validator'
 
 import { register, login, getProfile, updateProfile, changePassword } from '../controller/authController.js'
@@ -24,12 +24,12 @@ const loginValidation = [
 // Public routes
 
 router.post('/register', registerValidation, register);
-router.post('./login', loginValidation, login);
+router.post('/login', loginValidation, login);
 
 // protected routes
 
 router.get('/profile', protect, getProfile);
-router.get('/profile', protect, updateProfile);
+router.put('/profile', protect, updateProfile);
 router.get('/change-password', protect, changePassword);
 
 export default router;

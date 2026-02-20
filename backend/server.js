@@ -8,6 +8,7 @@ import connectDB from './config/db.js'
 import errorHandler from './middleware/errorHandler.js'
 
 import authRoutes from './routes/authRoute.js'
+import documentRoutes from './routes/documentRoute.js'
 // ES6 module_dirname altenative
 
 const __filename = fileURLToPath(import.meta.url);
@@ -44,7 +45,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 //Routes
-app.use('/api/auth',authRoutes)
+app.use('/api/auth',authRoutes);
+app.use('/api/documents',documentRoutes)
 app.use(errorHandler);
 // 404 handler
 
