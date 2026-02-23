@@ -1,5 +1,5 @@
-import { API_PATHS } from "../utils/apiPath";
-import axiosInstance from "../utils/axiosInstance";
+import axiosInstance from "../utils/axiosInstance.js";
+import { API_PATHS } from "../utils/apiPath.js";
 
 
 const getDocuments = async () => {
