@@ -4,13 +4,15 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import connectDB from './config/db.js'
-import errorHandler from './middleware/errorHandler.js'
+import connectDB from './config/db.js';
+import errorHandler from './middleware/errorHandler.js';
 
-import authRoutes from './routes/authRoute.js'
-import documentRoutes from './routes/documentRoute.js'
-import flashcardRoutes from './routes/flashCardRoute.js'
-import aiRoutes from './routes/aiRoute.js'
+import authRoutes from './routes/authRoute.js';
+import documentRoutes from './routes/documentRoute.js';
+import flashcardRoutes from './routes/flashCardRoute.js';
+import aiRoutes from './routes/aiRoute.js';
+import quizRoutes from './routes/quizRoute.js';
+import progressRoutes from './routes/progressRoute.js';
 // ES6 module_dirname altenative
 
 const __filename = fileURLToPath(import.meta.url);
@@ -50,7 +52,9 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/auth', authRoutes);
 app.use('/api/documents', documentRoutes);
 app.use('/api/flashcards', flashcardRoutes);
-app.use('/api/aiRoutes',aiRoutes)
+app.use('/api/ai', aiRoutes);
+app.use('/api/quizzes', quizRoutes);
+app.use('/api/progress', progressRoutes);
 
 app.use(errorHandler);
 // 404 handler
