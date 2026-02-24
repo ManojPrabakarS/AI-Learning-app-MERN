@@ -43,31 +43,31 @@ const LoginPage = () => {
     }
   };
   return (
-    <div className='flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden' onMouseMove={handleMouseMove}>
-      {/* Animated background gradient */}
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(168,85,247,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.1)_0%,transparent_50%)]' />
+    <div className='flex items-center justify-center min-h-screen bg-linear-to-br from-slate-800  to-slate-800 overflow-hidden' onMouseMove={handleMouseMove}>
+      {/* Animated background linear */}
+      <div className='absolute inset-0 bg-[radial-linear(circle_at_20%_50%,rgba(168,85,247,0.15)_0%,transparent_50%),radial-linear(circle_at_80%_80%,rgba(59,130,246,0.1)_0%,transparent_50%)]' />
       
       {/* Grid pattern background */}
-      <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:50px_50px] opacity-40' />
+      <div className='absolute inset-0 bg-[linear-linear(rgba(255,255,255,.02)_1px,transparent_1px),linear-linear(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-size-[50px_50px] opacity-40' />
 
       {/* Floating animated elements */}
-      <div className='absolute w-80 h-80 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-full blur-3xl animate-pulse' style={{top: '10%', left: '10%', animationDuration: '4s'}} />
-      <div className='absolute w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse' style={{bottom: '10%', right: '10%', animationDuration: '5s', animationDelay: '1s'}} />
+      <div className='absolute w-80 h-80 bg-linear-to-r from-purple-600/20 to-blue-600/20 rounded-full blur-3xl animate-pulse' style={{top: '10%', left: '10%', animationDuration: '4s'}} />
+      <div className='absolute w-96 h-96 bg-linear-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse' style={{bottom: '10%', right: '10%', animationDuration: '5s', animationDelay: '1s'}} />
 
       <div className='relative w-full max-w-7xl h-screen md:h-auto md:max-h-[700px] flex gap-8 px-4 md:px-8'>
         {/* Left Section - Login Form */}
         <div className='w-full md:w-1/2 flex items-center justify-center'>
           <div className='relative w-full max-w-md'>
             {/* Glow background */}
-            <div className='absolute -inset-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+            <div className='absolute -inset-3 bg-linear-to-r from-purple-600/20 to-blue-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
             
             <div className='relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl p-8 md:p-10 hover:border-white/30 transition-colors duration-300'>
               {/* Header */}
               <div className='text-center mb-12'>
-                <div className='inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 shadow-2xl shadow-purple-500/50 mb-6 transform hover:scale-110 transition-transform duration-300'>
+                <div className='inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-linear-to-br from-purple-500 to-blue-500 shadow-2xl shadow-purple-500/50 mb-6 transform hover:scale-110 transition-transform duration-300'>
                   <Puzzle className='w-8 h-8 text-white' strokeWidth={2} />
                 </div>
-                <h1 className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2'>Welcome back</h1>
+                <h1 className='text-3xl md:text-4xl font-bold bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2'>Welcome back</h1>
                 <p className='text-slate-300 text-sm md:text-base'>Sign in to continue your learning journey</p>
               </div>
 
@@ -118,7 +118,7 @@ const LoginPage = () => {
                 
                 {/* Error Message */}
                 {error && (
-                  <div className='rounded-xl bg-red-500/20 border border-red-500/50 p-4 animate-pulse'>
+                  <div className='rounded-xl bg-red-500/20 border border-red-500/50 p-2 mb-0 animate-pulse'>
                     <p className='text-xs text-red-300 font-medium text-center'>{error}</p>
                   </div>
                 )}
@@ -127,7 +127,7 @@ const LoginPage = () => {
                 <button
                   onClick={handleSubmit}
                   disabled={loading}
-                  className='group relative w-full h-12 mt-8 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 active:scale-95 text-white text-sm font-bold rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-500/50 overflow-hidden transform'>
+                  className='group relative w-full h-12 mt-8 bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 active:scale-95 text-white text-sm font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden transform'>
 
                   <span className='relative z-10 flex items-center justify-center gap-2'>
                     {loading ? (
@@ -142,7 +142,7 @@ const LoginPage = () => {
                       </>
                     )}
                   </span>
-                  <div className='absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700' />
+                  <div className='absolute inset-0 bg-linear-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700' />
                 </button>
               </div>
               
@@ -150,7 +150,7 @@ const LoginPage = () => {
               <div className='mt-8 pt-6 border-t border-white/10'>
                 <p className='text-center text-sm text-slate-400'>
                   Don't have an account?{' '}
-                  <Link to='/register' className='font-semibold text-purple-400 hover:text-purple-300 transition-colors duration-300'>
+                  <Link to='/register' className='font-semibold text-purple-100 hover:text-shadow-purple-700 transition-colors duration-300'>
                     Sign up free</Link>
                 </p>
               </div>
@@ -198,36 +198,36 @@ const LoginPage = () => {
               <div className='absolute w-48 h-48 rounded-full border-2 border-purple-400/30' style={{animation: 'spin 15s linear infinite'}} />
               
               {/* Center glow */}
-              <div className='absolute w-40 h-40 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 opacity-30 blur-3xl' style={{animation: 'pulse-glow 3s ease-in-out infinite'}} />
+              <div className='absolute w-40 h-40 rounded-full bg-linear-to-br from-purple-500 to-blue-500 opacity-30 blur-3xl' style={{animation: 'pulse-glow 3s ease-in-out infinite'}} />
               
               {/* Floating orbiting elements */}
               <div className='absolute w-full h-full'>
                 {/* Orbit 1 */}
                 <div style={{animation: 'orbit1 20s linear infinite'}} className='absolute w-12 h-12 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
-                  <div className='w-4 h-4 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full shadow-lg shadow-purple-500/50' />
+                  <div className='w-4 h-4 bg-linear-to-br from-purple-400 to-purple-600 rounded-full shadow-lg shadow-purple-500/50' />
                 </div>
 
                 {/* Orbit 2 */}
                 <div style={{animation: 'orbit2 25s linear infinite', animationDelay: '-5s'}} className='absolute w-12 h-12 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
-                  <div className='w-3 h-3 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full shadow-lg shadow-blue-500/50' />
+                  <div className='w-3 h-3 bg-linear-to-br from-blue-400 to-blue-600 rounded-full shadow-lg shadow-blue-500/50' />
                 </div>
 
                 {/* Orbit 3 */}
                 <div style={{animation: 'orbit3 15s linear infinite', animationDelay: '-3s'}} className='absolute w-12 h-12 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
-                  <div className='w-3 h-3 bg-gradient-to-br from-purple-300 to-pink-500 rounded-full shadow-lg shadow-pink-500/50' />
+                  <div className='w-3 h-3 bg-linear-to-br from-purple-300 to-pink-500 rounded-full shadow-lg shadow-pink-500/50' />
                 </div>
 
                 {/* Floating dots with float animation */}
-                <div className='absolute top-16 left-20 w-4 h-4 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full shadow-lg shadow-purple-500/50' style={{animation: 'float 6s ease-in-out infinite'}} />
-                <div className='absolute top-48 right-20 w-3 h-3 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full shadow-lg shadow-blue-500/50' style={{animation: 'float 7s ease-in-out infinite', animationDelay: '1s'}} />
-                <div className='absolute bottom-32 left-24 w-4 h-4 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full shadow-lg shadow-pink-500/50' style={{animation: 'float 8s ease-in-out infinite', animationDelay: '2s'}} />
-                <div className='absolute bottom-20 right-16 w-3 h-3 bg-gradient-to-br from-purple-300 to-purple-600 rounded-full shadow-lg shadow-purple-500/50' style={{animation: 'float 6.5s ease-in-out infinite', animationDelay: '1.5s'}} />
+                <div className='absolute top-16 left-20 w-4 h-4 bg-linear-to-br from-purple-400 to-purple-600 rounded-full shadow-lg shadow-purple-500/50' style={{animation: 'float 6s ease-in-out infinite'}} />
+                <div className='absolute top-48 right-20 w-3 h-3 bg-linear-to-br from-blue-400 to-blue-600 rounded-full shadow-lg shadow-blue-500/50' style={{animation: 'float 7s ease-in-out infinite', animationDelay: '1s'}} />
+                <div className='absolute bottom-32 left-24 w-4 h-4 bg-linear-to-br from-pink-400 to-pink-600 rounded-full shadow-lg shadow-pink-500/50' style={{animation: 'float 8s ease-in-out infinite', animationDelay: '2s'}} />
+                <div className='absolute bottom-20 right-16 w-3 h-3 bg-linear-to-br from-purple-300 to-purple-600 rounded-full shadow-lg shadow-purple-500/50' style={{animation: 'float 6.5s ease-in-out infinite', animationDelay: '1.5s'}} />
               </div>
             </div>
             
             {/* Center Content */}
             <div className='relative z-10 text-center'>
-              <h2 className='text-5xl md:text-6xl font-black bg-gradient-to-r from-purple-300 via-blue-300 to-purple-300 bg-clip-text text-transparent mb-4 leading-tight'>Learn Smarter</h2>
+              <h2 className='text-5xl md:text-6xl font-black bg-linear-to-r from-purple-300 via-blue-300 to-purple-300 bg-clip-text text-transparent mb-4 leading-tight'>Learn Smarter</h2>
               <p className='text-slate-300 text-lg md:text-xl font-medium'>AI-powered learning platform</p>
               <p className='text-slate-400 text-sm mt-2'>Master any subject with intelligent tutoring</p>
             </div>
