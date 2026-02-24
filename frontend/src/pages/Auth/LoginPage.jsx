@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import { Puzzle, Mail, Lock, ArrowRight } from 'lucide-react';
+import { Puzzle, Mail, Lock, LockOpen, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { useAuth } from '../../context/AuthContext.jsx';
 import authService from '../../service/authService.js';
@@ -11,6 +11,7 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [focusedField, setFocusField] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -76,17 +77,24 @@ const LoginPage = () => {
               <div className='space-y-2'>
                 <label className='block text-xs font-semibold text-slate-700 uppercase tracking-wide'>Password</label>
                 <div className='relative group'>
-                  <div className={`absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors duration-200 ${focusedField === 'password' ? 'text-purple-600' : 'text-slate-400'}`}>
-                    <Lock className='w-5 h-5' strokeWidth={2} />
+                  <div className={`absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-all duration-200 ${focusedField === 'password' ? 'text-purple-600' : 'text-slate-400'}`}>
+                    {showPassword ? <LockOpen className='w-5 h-5' strokeWidth={2} /> : <Lock className='w-5 h-5' strokeWidth={2} />}
                   </div>
-                  <input type="password"
+                  <input type={showPassword ? 'text' : 'password'}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     onFocus={() => setFocusField('password')}
                     onBlur={() => setFocusField(null)}
-                    className='w-full h-12 pl-12 pr-4 border-2 border-slate-200 rounded-xl bg-slate-50/50 text-slate-900 placeholder-slate-400 text-sm font-medium transition-all duration-200 focus:outline-none  focus:border-purple-500 focus:bg-white focus:shadow-lg focus:shadow-purple-500/10'
+                    className='w-full h-12 pl-12 pr-12 border-2 border-slate-200 rounded-xl bg-slate-50/50 text-slate-900 placeholder-slate-400 text-sm font-medium transition-all duration-200 focus:outline-none  focus:border-purple-500 focus:bg-white focus:shadow-lg focus:shadow-purple-500/10'
                     placeholder='Password'
                   />
+                  <button
+                    type='button'
+                    onClick={() => setShowPassword(!showPassword)}
+                    className='absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600 transition-colors duration-200'
+                  >
+                    {showPassword ? <EyeOff className='w-5 h-5' strokeWidth={2} /> : <Eye className='w-5 h-5' strokeWidth={2} />}
+                  </button>
                 </div>
               </div>
               {/* Error Message */}
