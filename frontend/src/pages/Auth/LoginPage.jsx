@@ -46,7 +46,7 @@ const LoginPage = () => {
                 <Puzzle className='w-7 h-7 text-white' strokeWidth={2} />
               </div>
               <h1 className='text-2xl font-medium text-slate-900 tracking-tight mb-2'>
-                Welcome back
+                Login
               </h1>
               <p className='text-slate-500 text-sm'>
                 Sign in to continue your journey
@@ -136,9 +136,9 @@ const LoginPage = () => {
             </div>
           </div>
           {/* Subtle footer text */}
-          <p className='text-center text-xs text-slate-400 mt-6'>
+          {/* <p className='text-center text-xs text-slate-600 mt-6'>
            Developed and Design by Manoj Prabakar
-          </p>
+          </p> */}
         </div>
       </div>
     
