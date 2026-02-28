@@ -41,8 +41,8 @@ const LoginPage = () => {
       <div className='relative w-full max-w-md px-6'>
         <div className='bg-white/80 backdrop-blur-xl border border-slate-200/60 rounded-3xl shadow-xl shadow-slate-200/50 p-10'>
           {/* Header */}
-          <div className='text-center mb-10'>
-            <div className='inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-linear-to-br from-purple-400 to-purple-500 shadow-lg shadow-purple-500/25 mb-6'>
+          <div className='text-center mb-5'>
+            <div className='inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-linear-to-br from-purple-400 to-purple-500 shadow-lg shadow-purple-500/25 mb-4'>
               <Puzzle className='w-7 h-7 text-white' strokeWidth={2} />
             </div>
             <h1 className='text-2xl font-medium text-slate-900 tracking-tight mb-2'>
@@ -127,7 +127,7 @@ const LoginPage = () => {
             </button>
           </div>
           {/* Footer */}
-          <div className='mt-8 pt-6 border-t border-slate-200/60'>
+          <div className='mt-2 pt-6 border-t border-slate-200/60'>
             <p className='text-center text-sm text-slate-600'>
               Don't have an account?{' '}
               <Link to='/register' className='font-semibold text-purple-600 hover:text-purple-700 transition-colors duration-200'>
