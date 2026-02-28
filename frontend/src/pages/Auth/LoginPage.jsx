@@ -85,7 +85,7 @@ const LoginPage = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   onFocus={() => setFocusField('password')}
                   onBlur={() => setFocusField(null)}
-                  className='w-full h-12 pl-12 pr-12 border-2 border-slate-200 rounded-xl bg-slate-50/50 text-slate-900 placeholder-slate-400 text-sm font-medium transition-all duration-200 focus:outline-none  focus:border-purple-500 focus:bg-white focus:shadow-lg focus:shadow-purple-500/10'
+                  className='w-full h-12 pl-12 pr-10 border-2 border-slate-200 rounded-xl bg-slate-50/50 text-slate-900 placeholder-slate-400 text-sm font-medium transition-all duration-200 focus:outline-none  focus:border-purple-500 focus:bg-white focus:shadow-lg focus:shadow-purple-500/10'
                   placeholder='Password'
                 />
                 <button
