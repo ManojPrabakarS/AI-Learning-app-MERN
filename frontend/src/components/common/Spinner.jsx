@@ -1,9 +1,8 @@
 import React from 'react'
 import { RingLoader } from 'react-spinners'
 
-// simplified spinner: ring loader only, color/size/loading/fullScreen props
 const Spinner = ({
-  color = '#a32bc3',
+  color = '#8424FE',
   size = 100,
   loading = true,
   fullScreen = false,
