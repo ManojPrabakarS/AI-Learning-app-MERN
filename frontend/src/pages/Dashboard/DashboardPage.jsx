@@ -1,7 +1,7 @@
 import Spinner from "../../components/common/Spinner";
 import progressService from '../../service/progressService.js';
 import toast from 'react-hot-toast';
-import { FileText, WalletCards, Puzzle, ChartNoAxesCombined, Clock } from 'lucide-react';
+import { FileText, WalletCards, CircleStar, ChartNoAxesCombined, Clock } from 'lucide-react';
 import { useEffect, useState } from "react";
 
 const DashboardPage = () => {
@@ -60,7 +60,7 @@ const DashboardPage = () => {
     {
       label: 'Total Quizzes',
       value: dashboardData.overview.totalQuizzes,
-      icon: Puzzle,
+      icon: CircleStar,
       gradient: 'from-indigo-300 to-indigo-600',
       shadowColor: 'shadow-teal-500/25'
     }
