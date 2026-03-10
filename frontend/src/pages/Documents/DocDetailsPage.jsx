@@ -6,6 +6,9 @@ import toast from "react-hot-toast"
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import PageHeader from '../../components/common/PageHeader';
 import Tabs from '../../components/common/Tabs';
+import ChatInterFace from '../../components/chat/ChatInterFace';
+
+
 const DocDetailsPage = () => {
 
     const { id } = useParams();
@@ -73,7 +76,7 @@ const DocDetailsPage = () => {
                     <iframe src={pdfUrl}
                         className='w-full h-[70vh] bg-white rounded border border-gray-300'
                         title='PDF Viewer'
-                        frameborder="0"
+                    
                         style={{
                             colorScheme: 'light'
                         }}
@@ -84,7 +87,7 @@ const DocDetailsPage = () => {
     };
 
     const renderChat = () => {
-        return 'RenderChat'
+        return <ChatInterFace/>
     }
 
     const renderAIactions = () => {
