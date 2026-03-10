@@ -287,15 +287,15 @@ const DocListPage = () => {
           {/* Close  */}
           <button
             onClick={() => setIsDeleteModelOpen(false)}
-            className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-all duration-200"
+            className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-all duration-200"
           >
             <X className="w-5 h-5" strokeWidth={2} />
           </button>
 
           {/* Model Header  */}
 
-          <div className="mb-6">
-            <div className="w-12 h-12 rounded-xl bg-linear-to-r from-red-100 to-red-200 flex items-center justify-center mb-4">
+          <div className="mb-6 flex items-center gap-3 ">
+            <div className="w-12 h-12 rounded-xl bg-linear-to-r from-red-100 to-red-200 flex items-center justify-center ">
               <Trash2 className="w-6 h-6 text-red-600" strokeWidth={2} />
             </div>
             <h2 className="text-xl font-medium text-slate-900 tracking-tight">
