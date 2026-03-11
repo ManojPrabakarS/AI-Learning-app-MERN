@@ -31,6 +31,7 @@ const generateSummary = async (documentId) => {
 const chat = async (documentId, message) => {
     try {
         const response = await axiosInstance.post(API_PATHS.AI.CHAT, { documentId, question: message });
+        return response.data;
     } catch (error) {
         throw error.response?.data || { message: 'Chat request failed' }
     }
