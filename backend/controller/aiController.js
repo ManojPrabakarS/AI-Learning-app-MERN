@@ -25,7 +25,7 @@ export const generateFlashcards = async (req, res, next) => {
         const document = await Document.findOne({
             _id: documentId,
             userId: req.user._id,
-            status: 'Ready'
+            status: 'ready'
         });
 
         if (!document) {
@@ -86,7 +86,7 @@ export const generateQuiz = async (req, res, next) => {
         const document = await Document.findOne({
             _id: documentId,
             userId: req.user._id,
-            status: 'Ready'
+            status: 'ready'
         });
 
         if (!document) {
@@ -145,7 +145,7 @@ export const generateSummary = async (req, res, next) => {
         const document = await Document.findOne({
             _id: documentId,
             userId: req.user._id,
-            status: 'Ready'
+            status: 'ready'
         });
 
         if (!document) {
