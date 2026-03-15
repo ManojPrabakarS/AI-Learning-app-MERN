@@ -115,7 +115,7 @@ export const generateQuiz = async (req, res, next) => {
             score: 0
         });
 
-        req.status(201).json({
+        res.status(201).json({
             success: true,
             data: quiz,
             message: 'Quiz generated successfully'
@@ -181,7 +181,7 @@ export const chat = async (req, res, next) => {
     try {
         const { documentId, question } = req.body;
 
-        if (!documentId || !question) {
+        if (!documentId || !question || typeof question !== 'string' || question.trim().length === 0) {
             return res.status(400).json({
                 success: false,
                 error: 'Please provide documentId and question',
