@@ -2,7 +2,7 @@
 const FlashCardsPage = () => {
   return (
     <div>
-      FlashCardsPage
+      Quiz Cards
     </div>
   )
 }

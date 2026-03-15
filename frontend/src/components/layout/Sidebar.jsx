@@ -2,7 +2,7 @@ import React from 'react'
 
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.jsx';
-import { LayoutDashboard, ScrollText, UserRoundCog, LogOut, Puzzle, WalletCards, X } from 'lucide-react';
+import { LayoutDashboard, ScrollText, UserRoundCog, Blocks, LogOut, Puzzle, WalletCards, X } from 'lucide-react';
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
 
     const { logout } = useAuth();
@@ -16,7 +16,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
     const navLinks = [
         { to: '/dashboard', icon: LayoutDashboard, text: 'Dashboard' },
         { to: '/documents', icon: ScrollText, text: 'Documents' },
-        { to: '/flashcards', icon: WalletCards, text: 'Flashcards' },
+        { to: '/flashcards', icon: WalletCards, text: 'Quiz Cards' },
+        { to: '/course', icon: Blocks, text: 'My learning' },
         { to: '/profile', icon: UserRoundCog, text: 'Profile' },
     ]
     return (
@@ -74,7 +75,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                 <div className='px-3 py-4 border-t border-slate-200/60'>
                     <button onClick={handleLogout}
                         className='group flex items-center gap-3 w-full px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-red-50 hover:text-red-600 rounded-xl transition-all duration-200'>
-                        <LogOut size={18} strokeWidth={2.5} className='transition-transform duration-200 group-hover:scale-110'/> Logout
+                        <LogOut size={18} strokeWidth={2.5} className='transition-transform duration-200 group-hover:scale-110' /> Logout
                     </button>
                 </div>
             </aside>

@@ -2,7 +2,7 @@
 const FlashCardListPage = () => {
   return (
     <div>
-      FlashCardListPage
+      Quiz Cards list
     </div>
   )
 }
