@@ -293,13 +293,13 @@ export const explainConcept = async (req, res, next) => {
         const context = relevantChunks.map(c => c.content).join('\n\n');
 
         // Generate explanation using Gemini
-        const explanation = await geminiService.explainConcept(concept, context);
+        const explaination = await geminiService.explainConcept(concept, context);
 
         res.status(200).json({
             success: true,
             data: {
                 concept,
-                explanation,
+                explaination,
                 relevantChunks: relevantChunks.map(c => c.chunkIndex)
             },
             message: 'Explanation generated successfully'
