@@ -18,7 +18,7 @@ const AIActions = () => {
     const [concept, setConcept] = useState("");
 
     const handleGenerateSummary = async () => {
-        setLoadingAction("Summary")
+        setLoadingAction("summary")
         try {
 
             const response = await aiService.generateSummary(documentId);
