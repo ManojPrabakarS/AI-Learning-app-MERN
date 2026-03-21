@@ -24,7 +24,7 @@ export const getDashboard = async (req, res, next) => {
         let starredFlashcards = 0;
 
         flashcardSets.forEach(set => {
-            totalFlashcardSets += set.cards.length;
+            totalFlashcards += set.cards.length;
             reviewedFlashcards += set.cards.filter(c => c.reviewCount > 0).length;
             starredFlashcards += set.cards.filter(c => c.isStarred).length;
         });
