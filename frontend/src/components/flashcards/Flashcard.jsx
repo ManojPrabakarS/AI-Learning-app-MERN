@@ -22,7 +22,7 @@ const Flashcard = ({ flashcard, onToggleStar }) => {
 
                 {/* Front of the Card */}
 
-                <div className='absolute inset-0 w-full h-full bg-white/80 backdrop-blur-xl border-2 border-slate-200/60 rounded-2xl shadow-xl shadow-slate-200/50 p-8 flex flex-col justify-between' style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
+                <div className='absolute inset-0 w-full h-full bg-white/80 backdrop-blur-xl border-2 border-slate-200/60 rounded-2xl shadow-xl shadow-slate-200/50 p-8 flex flex-col justify-between hover:border-violet-400 transition-all duration-200' style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
 
                     {/* Star Button  */}
                     <div className='flex items-start justify-between'>
@@ -57,7 +57,7 @@ const Flashcard = ({ flashcard, onToggleStar }) => {
 
 
                 {/* Back of the Card */}
-                <div className='absolute inset-0 w-full h-full bg-linear-to-br from-purple-500 to-violet-500 border-2 border-purple-400/60 rounded-2xl shadow-xl shadow-purple-500/30 p-8 flex flex-col justify-between'
+                <div className='absolute inset-0 w-full h-full bg-linear-to-br from-purple-600 to-violet-600 border-2 border-purple-400/60 rounded-2xl shadow-xl shadow-purple-500/30 p-8 flex flex-col justify-between'
                     style={{
                         backfaceVisibility: 'hidden',
                         WebkitBackfaceVisibility: 'hidden',
@@ -72,7 +72,7 @@ const Flashcard = ({ flashcard, onToggleStar }) => {
                                 onToggleStar(flashcard._id)
                             }}
 
-                            className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200 ${flashcard.isStarred ? 'bg-white/30 backdrop-blur-sm text-white border border-white/40'
+                            className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200 ${flashcard.isStarred ? 'bg-white/30 backdrop-blur-sm text-amber-300 border border-white/40'
                                 : 'bg-white/20 backdrop-blur-sm text-white/70 hover:bg-white/30 hover:text-white border border-white/20'
                                 }`}
                         >
