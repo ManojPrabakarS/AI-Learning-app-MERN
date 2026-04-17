@@ -1,8 +1,9 @@
+import Development from "../Developement/Development"
 
 const FlashCardListPage = () => {
   return (
     <div>
-      Quiz Cards list
+      <Development/>
     </div>
   )
 }

@@ -9,6 +9,7 @@ import Tabs from '../../components/common/Tabs';
 import ChatInterFace from '../../components/chat/ChatInterFace';
 import AIActions from '../../components/ai/AIActions';
 import FlashcardManager from '../../components/flashcards/FlashcardManager';
+import QuizManager from '../../components/quizzes/QuizManager';
 
 
 const DocDetailsPage = () => {
@@ -78,7 +79,7 @@ const DocDetailsPage = () => {
                     <iframe src={pdfUrl}
                         className='w-full h-[70vh] bg-white rounded border border-gray-300'
                         title='PDF Viewer'
-                    
+
                         style={{
                             colorScheme: 'light'
                         }}
@@ -89,11 +90,11 @@ const DocDetailsPage = () => {
     };
 
     const renderChat = () => {
-        return <ChatInterFace/>
+        return <ChatInterFace />
     }
 
     const renderAIactions = () => {
-        return <AIActions/>
+        return <AIActions />
     }
 
     const renderFlashcardsTab = () => {
@@ -101,7 +102,7 @@ const DocDetailsPage = () => {
     }
 
     const renderQuizzesTab = () => {
-        return 'renderQuizzesTab'
+        return <QuizManager documentId={id} />
     }
 
 

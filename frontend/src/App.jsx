@@ -16,6 +16,7 @@ import QuizzResultsPage from './pages/Quizz/QuizzResultsPage';
 import ProfilePage from './pages/Profile/ProfilePage';
 import MyLearning from './pages/MyLearning/MyLearning';
 import { useAuth } from './context/AuthContext';
+import Development from './pages/Developement/Development';
 
 
 const App = () => {
@@ -52,7 +53,7 @@ const App = () => {
             <Route path='/course' element={<MyLearning />} />
           </Route>
 
-          <Route path='*' element={<NotFound />} />
+          <Route path='*' element={<Development />} />
         </Routes>
       </Router>
     </>

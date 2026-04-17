@@ -1,9 +1,10 @@
+import Development from "../Developement/Development"
 
 const ProfilePage = () => {
     return (
-        <div>
-            Profile Page
-        </div>
+   <div>
+      <Development/>
+    </div>
     )
 }
 
